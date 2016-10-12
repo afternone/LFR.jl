@@ -48,7 +48,7 @@ end
 function write_community(commfile, membership; start_index=0)
     open(commfile,"w") do f
         for i in membership
-            println(f, i[end]-1+start_index)
+            println(f, i[1]-1+start_index, ' ', i[end])
         end
     end
 end
